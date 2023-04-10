@@ -1,0 +1,47 @@
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+}
+
+.loginPage > h1 {
+  text-align: center;
+}
+
+.loginPage form {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+}
+ 
+.loginSections {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.signInButton {
+  padding: 10px;
+  width: 90px;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0);
+}
+
+.signInButton:hover {
+  border: 1px solid black;
+}
+
+.loginLabel {
+  font-weight: 700;
+}
+
+.loginErrorM {
+  color: red;
+}
+
+.loginInput {
+  padding: 5px;
+  width: 100%;
+  background: rgba(128, 128, 128, 0.1);
+}

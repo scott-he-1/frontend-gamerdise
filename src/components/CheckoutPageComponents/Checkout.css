@@ -1,0 +1,150 @@
+.checkoutMainDisplay {
+  display: flex;
+  border: 2px solid black;
+  justify-content: space-between;
+  padding: 10px;
+  grid-gap: 20px;
+}
+
+.summarySectionSide {
+  flex: 2;
+}
+
+.userInfoSide {
+  flex: 4;
+}
+
+.priceSummary {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.priceSummaryField {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.priceSummaryField {
+  flex: 1;
+  text-align: left;
+  color: #555;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.userCardInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.userCardInfo button {
+  display: block;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.userCardInfo button:hover {
+  background-color: #0069d9;
+}
+
+.userCardInfo button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cardInfoInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.cardInfoInput label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cardInfoInput input,
+.cardInfoInput select {
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.cardInfoInput input:focus,
+.cardInfoInput select:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.cardInfoSelectContainer div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.checkoutPage input[type="text"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.checkoutPage select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.addressInfoLabel {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.addressInputErrorM {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.addressInputFields {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+}
+
+.addressInputFields > div {
+  width: 30%;
+  margin-bottom: 20px;
+}
