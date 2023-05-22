@@ -50,7 +50,7 @@ export var deleteNotification = function (_a) {
                     return [4 /*yield*/, fetch("".concat(DATABASE_URL, "/notification/").concat(notificationId), {
                             method: "DELETE",
                             headers: {
-                                Authorization: "Bearer ".concat(user),
+                                Authorization: "Bearer ".concat(user.token),
                                 "Content-Type": "application/json",
                             },
                         })];

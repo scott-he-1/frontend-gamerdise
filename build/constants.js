@@ -1,1 +1,1 @@
-export var DATABASE_URL = "http://localhost:3000";
+export var DATABASE_URL = "https://gamerdise-backend.onrender.com";

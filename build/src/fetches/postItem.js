@@ -58,6 +58,7 @@ export var postItem = function (_a) {
                     return [4 /*yield*/, fetch("".concat(DATABASE_URL, "/postedItems"), {
                             method: "POST",
                             headers: {
+                                Authorization: "Bearer ".concat(user.token),
                                 "Content-Type": "application/json",
                             },
                             body: JSON.stringify(itemToPost),

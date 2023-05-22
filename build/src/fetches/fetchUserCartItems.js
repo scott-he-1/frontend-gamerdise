@@ -46,6 +46,7 @@ export var fetchUserCartItems = function () { return __awaiter(void 0, void 0, v
                 }
                 user = JSON.parse(unparsedUser);
                 return [4 /*yield*/, fetch("".concat(DATABASE_URL, "/user/").concat(user.id, "/cartItems"), {
+                        method: "GET",
                         headers: {
                             Authorization: "Bearer ".concat(user.token),
                             "Content-Type": "application/json",

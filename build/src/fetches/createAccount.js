@@ -34,12 +34,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+import { DATABASE_URL } from "../../constants";
 export var createAccount = function (_a) {
     var email = _a.email, password = _a.password;
     return __awaiter(void 0, void 0, void 0, function () {
         return __generator(this, function (_b) {
             switch (_b.label) {
-                case 0: return [4 /*yield*/, fetch("".concat(URL, "/user"), {
+                case 0: return [4 /*yield*/, fetch("".concat(DATABASE_URL, "/user"), {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",

@@ -1,17 +1,29 @@
 import "./App.css";
-import React, { useState } from "react";
-import { useGamerdise } from "./providers/GamerdiseProvider";
+import React from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { Layout } from "./pages/Layout";
+import { PostAnItemPage } from "./pages/PostAnItemPage";
+import { LoginPage } from "./pages/LoginPage";
+import { HomePage } from "./pages/HomePage";
+import { CheckoutPage } from "./pages/CheckoutPage";
+import { ConfirmationPage } from "./pages/ConfirmationPage";
 function App() {
-    var _a = useGamerdise(), categoryFilter = _a.categoryFilter, setCategoryFilter = _a.setCategoryFilter, loginToSite = _a.loginToSite;
-    var _b = useState(""), email = _b[0], setEmail = _b[1];
-    var _c = useState(""), password = _c[0], setPassword = _c[1];
+    var loggedIn = localStorage.getItem("user");
+    var currentAccountExists = JSON.parse(String(loggedIn));
+    var PrivateRoute = function (_a) {
+        var children = _a.children;
+        return currentAccountExists ? children : React.createElement(Navigate, { to: "/login", replace: true });
+    };
     return (React.createElement("div", { className: "App" },
-        React.createElement("form", { onSubmit: function (e) {
-                e.preventDefault();
-                loginToSite({ email: email, password: password });
-            } },
-            React.createElement("input", { type: "text", name: "emailInput", onChange: function (e) { return setEmail(e.target.value); } }),
-            React.createElement("input", { type: "text", name: "passwordInput", onChange: function (e) { return setPassword(e.target.value); } }),
-            React.createElement("button", null, "Submit"))));
+        React.createElement(BrowserRouter, null,
+            React.createElement(Routes, null,
+                React.createElement(Route, { path: "/", element: React.createElement(Layout, null) },
+                    React.createElement(Route, { index: true, element: React.createElement(HomePage, null) }),
+                    React.createElement(Route, { path: "/login", element: React.createElement(LoginPage, null) }),
+                    React.createElement(Route, { path: "/confirmationPage", element: React.createElement(ConfirmationPage, null) }),
+                    React.createElement(Route, { path: "/postAnItem", element: React.createElement(PrivateRoute, null,
+                            React.createElement(PostAnItemPage, null)) }),
+                    React.createElement(Route, { path: "/checkout", element: React.createElement(PrivateRoute, null,
+                            React.createElement(CheckoutPage, null)) }))))));
 }
 export default App;

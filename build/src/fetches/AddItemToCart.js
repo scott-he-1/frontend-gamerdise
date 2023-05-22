@@ -35,7 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import { DATABASE_URL } from "../../constants";
-export var deleteCartItem = function (_a) {
+export var addItemToCart = function (_a) {
     var itemId = _a.itemId;
     return __awaiter(void 0, void 0, void 0, function () {
         var unparsedUser, user;
@@ -48,10 +48,10 @@ export var deleteCartItem = function (_a) {
                     }
                     user = JSON.parse(unparsedUser);
                     return [4 /*yield*/, fetch("".concat(DATABASE_URL, "/user/").concat(user.id, "/cartItems"), {
-                            method: "DELETE",
+                            method: "POST",
                             headers: {
                                 Authorization: "Bearer ".concat(user.token),
-                                "Content-type": "application/json",
+                                "Content-Type": "application/json",
                             },
                             body: JSON.stringify({ itemId: itemId }),
                         })];
