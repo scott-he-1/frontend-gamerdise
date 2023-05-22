@@ -49,3 +49,14 @@
 .greeting {
   text-align: center;
 }
+
+@media screen and (min-width: 600px) {
+  .postedItemsMainDisplay {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .postedItemsSection {
+    justify-content: center;
+  }
+}
