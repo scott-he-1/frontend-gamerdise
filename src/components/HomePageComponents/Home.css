@@ -49,18 +49,3 @@
 .greeting {
   text-align: center;
 }
-
-@media all and (max-width: 675px) {
-  .postedItemsMainDisplay {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .postedItemsSection {
-    justify-content: center;
-  }
-
-  .addressInputFields {
-    display: block;
-  }
-}

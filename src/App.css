@@ -80,3 +80,18 @@ h4,
 h5 {
   margin: 0;
 }
+
+@media all and (max-width: 675px) {
+  .postedItemsMainDisplay {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .postedItemsSection {
+    justify-content: center;
+  }
+
+  .addressInputFields {
+    display: block;
+  }
+}
