@@ -1,1 +1,1 @@
-export const DATABASE_URL = "https://gamerdise-backend.onrender.com";
+export const DATABASE_URL = "https://gamerdise-backend-production.up.railway.app/";
